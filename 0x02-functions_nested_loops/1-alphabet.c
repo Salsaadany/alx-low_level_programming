@@ -3,6 +3,7 @@
 
 	/**
 	 * print_alphabet - print the alphabet in lowercase
+	 * Description: prints all alphabet
 	 * Return: void
 	 */
 
