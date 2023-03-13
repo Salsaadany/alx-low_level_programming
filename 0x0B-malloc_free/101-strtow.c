@@ -4,8 +4,8 @@
 *  * count_word - helper function to count the number of words in a string
 *   * @s: string to evaluate
 *    *
-*     * Return: number of words	
-*      */
+*     * Return: number of words
+*/
 int count_word(char *s)
 
 {
@@ -62,7 +62,6 @@ while (start < end)
 matrix[k] = tmp - c;
 k++;
 c = 0;
-		
 }
 }
 else if (c++ == 0)
@@ -72,4 +71,3 @@ start = i;
 matrix[k] = NULL;
 return (matrix);
 }
-
