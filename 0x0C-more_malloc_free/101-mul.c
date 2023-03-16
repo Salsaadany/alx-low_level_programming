@@ -15,7 +15,6 @@ int main(int argc, char *argv[])
 {
 	char *num1, *num2;
 	int i, j, k, len1, len2, len, d1, d2, d1d2, carry, *mul;
-
 	if (argc != 3 || !(_isnumber(argv[1])) || !(_isnumber(argv[2])))
 		_error(), exit(98);
 	num1 = argv[1], num2 = argv[2];
