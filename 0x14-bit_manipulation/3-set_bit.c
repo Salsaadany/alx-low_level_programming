@@ -7,12 +7,9 @@
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned int x = 0;
-
 	if (index < 63)
 	{
-		x = 1 << index;
-		*n = (*n | x);
+		*n |= (1 << index);
 		return (1);
 	}
 	else
