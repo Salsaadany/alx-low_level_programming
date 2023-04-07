@@ -9,11 +9,12 @@
 */
 int get_bit(unsigned long int n, unsigned int index)
 {
-int bvalue = 0;
-if (index < 63)
-bvalue = n >> index;
-bvalue = bvalue & 1;
-return (bvalue);
-else
-return (-1);
+	int bvalue = 0;
+	if (index < 63)
+		bvalue = n >> index;
+		bvalue = bvalue & 1;
+		return (bvalue);
+	
+	else
+		return (-1);
 }
