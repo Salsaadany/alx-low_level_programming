@@ -15,10 +15,10 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 
 	for (x = 63; x >= 0; x--)
 	{
-		if (((n^m) >> x) & 1)
+		if (((n ^ m) >> x) & 1)
 			counter += 1;
 	}
-	
+
 	return (counter);
 
 }
