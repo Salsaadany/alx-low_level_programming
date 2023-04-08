@@ -21,7 +21,7 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	if (text_content)
 	{
-		for (count = 0; text_content[count]; count)
+		for (count = 0; text_content[count]; count++)
 			;
 
 		r_w1 = write(x, text_content, count);
