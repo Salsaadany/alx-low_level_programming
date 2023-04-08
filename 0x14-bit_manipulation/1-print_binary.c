@@ -1,28 +1,48 @@
 #include "main.h"
+
 /**
-* print_binary - converts a decimal number to a base2 num
-* @n: the num to be printed in base2 numerical system
-*/
+ * cal_pwr - this function's objectiev is to calculate the power
+ * @base: the number itself
+ * @p: the power's value
+ *
+ * Return: the result's value
+ */
+unsigned long int cal_pwr(unsigned int bnmbr, unsigned int p)
+{
+	unsigned long int digits = 1;
+	unsigned int x;
+
+	for (x = 1; x <= p; x++)
+		digits = digits * bnmbr;
+	return (digits);
+}
+
+/**
+ * print_binary - this func's objctve is to convert base 10 num to
+ * a base2 num 
+ * @n: number to print
+ *
+ * Return: void
+ */
 void print_binary(unsigned long int n)
 {
-	int cnt = 0, x;
-	unsigned long int bin, temp;
+	unsigned long int m, k;
+	char z = 0;
 
-	if (n == 0)
-		return 0; 
+	m = cal_pwr(2, sizeof(unsigned long int) * 8 - 1);
 
-	for (x = 63; x >= 0; x--)
+	while (m != 0)
 	{
-		temp = n >> x;
-
-		if (temp & 1)
+		k = n & m;
+		if (k == m)
 		{
+			z = 1;
 			_putchar('1');
-			cnt++;
 		}
-		else if (cnt)
+		else if (z == 1 || m == 1)
+		{
 			_putchar('0');
+		}
+		m >>= 1;
 	}
-	if (!cnt)
-		_putchar('0');
 }
