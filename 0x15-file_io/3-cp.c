@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	root = open(argv[1], O_RDONLY);
-	check_IO_stat(src, -1, argv[1], 'O');
+	check_IO_stat(root, -1, argv[1], 'O');
 	peet = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, mode);
 	check_IO_stat(peet, -1, argv[2], 'W');
 	while (rn == 1024)
