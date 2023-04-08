@@ -2,7 +2,7 @@
 
 /**
  * cal_pwr - this function's objectiev is to calculate the power
- * @base: the number itself
+ * @bnmbr: the number itself
  * @p: the power's value
  *
  * Return: the result's value
@@ -18,8 +18,8 @@ unsigned long int cal_pwr(unsigned int bnmbr, unsigned int p)
 }
 
 /**
- * print_binary - this func's objctve is to convert base 10 num to
- * a base2 num 
+ * print_binary - this func's objctve is to convert
+ * base 10 num to base2
  * @n: number to print
  *
  * Return: void
